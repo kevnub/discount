@@ -1,0 +1,333 @@
+<link href="discount.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    window.onload = function(){
+        /*Collapsibles*/
+    	var coll = document.getElementsByClassName("discount-collapsible");
+    	for (var i = 0; i < coll.length; i++) {
+    		coll[i].addEventListener("click", function() {
+    			this.classList.toggle("active");
+    			var content = this.nextElementSibling;
+    			if (content.style.display === "block") {
+    				content.style.display = "none";
+    			} else {
+    				content.style.display = "block";
+    			}
+    		})
+    	}
+    }
+    /*Smooth Scroll*/
+    $(document).ready(function(){
+    $("a").on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top},
+                    800,
+                    function(){window.location.hash = hash;});
+        }});
+    });
+</script>
+<!-- Main Body -->
+<div class="discount-body">
+
+        <h1 class="discount" align="center" style="margin: 20px;"> GM Supplier Discounts </h1>
+        <hr class="discount">
+
+        <div class="discount-gradient">
+            <iframe src="discount-carousel.html" frameborder="0" scrolling="no" class="responsive-height"></iframe>
+        </div>
+
+        <div class="discount-navbar-row discount-navbar">
+            <div class="discount-col-xs-6 discount-col-sm-3 discount-flex discount-vertical-divider"><a href="#overview">Overview</a></div>
+            <div class="discount-col-xs-6 discount-col-sm-3 discount-flex discount-vertical-divider"><a href="#eligibility">Eligibility</a></div>
+            <div class="discount-col-xs-6 discount-col-sm-3 discount-flex discount-vertical-divider"><a href="#faqs">FAQs</a></div>
+            <div class="discount-col-xs-6 discount-col-sm-3 discount-flex discount-vertical-divider"><a href="#rules">Rules and Guidelines</a></div>
+        </div>
+
+        <div id="overview" style="background-color: #424242;">
+            <div class="discount-row">
+                <div class="discount-col-xs-12 overview" style="background-color: #424242;">
+                    <h2 class="discount" style="color: white;">About the GM Supplier Discount</h2>
+                    <p style="color: white;">You move us forward. And that deserves something special. As an eligible employee of a GM supplier company, you've earned the GM Supplier Discount. It gives you special pricing below MSRP on eligible, new Chevrolet, Buick, GMC and Cadillac vehicles. Combine your discount with most current offers to save even more.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="eligibility" class="discount-container" style="margin-top: 35px;">
+            <div class="discount-section">
+                <h2 class="discount" align="center" style="margin-top: 45px;">Employee Eligibility</h2>
+                <div class="discount-row">
+                    <div class="discount-col-xs-12 discount-col-sm-6">
+                        <h3 class="discount">Who is eligible for the GM Supplier Discount?</h3>
+                        <p>If you're an active hourly or salaried (full- and part-time) employee of an eligible GM supplier or business associate (e.g., fleet and commercial customer) residing in the United States, you are eligible for the GM Supplier Discount. Contract employees are not eligible.</p>
+                    </div>
+                    <div class="discount-col-xs-12 discount-col-sm-6">
+                        <h3 class="discount">Which vehicles are eligible for the GM Supplier Discount?</h3>
+                        <p>Many new and unused 2018 and 2017 GM cars; SUVs; crossovers; midsize, light-duty and HD pickup trucks; and passenger and cargo vans are eligible. Vehicle eligibility may change over time, so check before you buy.</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="discount">
+        </div> <!-- end of eligibility -->
+
+        <div id="faqs" class="discount-container" style="margin-top: 35px;">
+            <div class="discount-section">
+                <h2 class="discount" align="center" style="margin-top:45px;">FAQs</h2>
+            </div>
+            <button class="discount-collapsible">Program Facts</button>
+            <div class="discount-collapsible-content">
+                <p class="question"><b>What is the vehicle discount?</b></p>
+                <p class="answer">The GM Supplier Discount program allows eligible employees of GM supplier companies to purchase or lease eligible vehicles at a special discounted price below MSRP. Plus, you can combine the discount with most current offers to save even more. When you build a vehicle to your exact specifications on this site, you can view MSRP and the GM Supplier Discount price - simply follow the prompts.</p>
+
+                <p class="question"><b>Which GM vehicles are eligible?</b></p>
+                <p class="answer">Many new and unused 2018 and 2017 GM cars; SUVs; crossovers; midsize, light-duty and HD pickup trucks; and passenger and cargo vans are eligible. See a list of eligible vehicles. Vehicle eligibility may change over time, so check before you buy.</p>
+
+                <p class="question"><b>How do I take advantage of the GM supplier discount?</b></p>
+                <p class="answer">To use the discount, get your Company Code - which is listed alongside your company's name on the About the Discount Page under Company Eligibility - and register or sign in on the home page. Select "GM Supplier Discount" from the Programs menu. Then choose "Get Authorization Number" and follow the prompts. Print out your authorization number and take it, along with proof of eligibility (see below), to a participating GM Dealer.</p>
+
+                <p class="question"><b>What should I bring as proof of eligibility?</b></p>
+                <p class="answer">You must present the following along with a valid authorization number: <br>
+                    1.  A copy of your company ID/badge or a copy of a current pay stub (within the last 30 days) with all information redacted except the date of the pay stub, your name and name of your supplier company.<br>
+                    2.  A copy of your driver's license with the driver's license number redacted.</p>
+
+                <p class="question"><b>How many vehicles am I eligible to purchase/lease?</b></p>
+                <p class="answer">You may purchase/lease up to two (2) eligible, new and unused GM vehicles per calendar year.</p>
+
+                <p class="question"><b>As an eligible participant, can I title a vehicle in the name of a living trust?</b></p>
+                <p class="answer">Yes, as long as the living trust bears the name of the eligible participant.</p>
+
+                <p class="question"><b>How long do I have to keep a vehicle to qualify for the GM Supplier Discount?</b></p>
+                <p class="answer">Vehicles must be retained for a minimum of six (6) months from the vehicle delivery date.</p>
+
+                <p class="question"><b>I recently bought/leased a new GM vehicle. Can I still apply for the GM Supplier Discount?</b></p>
+                <p class="answer">No. Previous purchases/leases are not eligible.</p>
+
+                <p class="question"><b>Does my authorization number expire?</b></p>
+                <p class="answer">Authorization numbers are valid for 90 days toward the purchase or lease of an eligible, new vehicle. You must take delivery of the vehicle prior to the authorization number expiring.</p>
+
+                <p class="question"><b>What happens to my authorization number if I don't use it before it expires?</b></p>
+                <p class="answer">If you don't use your authorization number prior to the expiration date, the authorization will be added back into your account. To purchase or lease, you will have to obtain a new authorization number by following the prompts in the Programs menu.</p>
+            </div>
+
+            <button class="discount-collapsible">Program Eligibility</button>
+            <div class="discount-collapsible-content">
+                <p class="question"><b>Who is eligible to participate in the GM Supplier Discount Program?</b></p>
+                <p class="answer">Active hourly and salaried (full- and part-time) employees of eligible GM suppliers and business associates (e.g., fleet and commercial customers), not including contract employees. Please note: To qualify for this program, you must be a resident of the United States. To determine if your company is eligible, perform a company search. If eligible, your Company Code will be listed alongside your company's name.</p>
+
+                <p class="question"><b>Are my family members eligible for the GM Supplier Discount?</b></p>
+                <p class="answer">For one (1) year after you purchase or lease a new GM vehicle under the GM Supplier Discount Program, you can share your discount with one friend or family member. You can share two (2) discounts per calendar year. See the "Share Your Discount" section below for more information.</p>
+            </div>
+
+            <button class="discount-collapsible">Share Your Discount</button>
+            <div class="discount-collapsible-content">
+                <p class="question"><b>Can I share the GM Supplier Discount with friends and family members?</b></p>
+                <p class="answer">Each time you purchase or lease a new GM vehicle under the GM Supplier Discount Program, you can share the Supplier Discount with one friend or family member. Share it for up to one year from the date of your vehicle purchase. Once you obtain an authorization number, your friend or family member will have 90 days to use it.</p>
+
+                <p class="question"><b>Who is eligible to share the GM Supplier Discount with friends and family members?</b></p>
+                <p class="answer">Active hourly and salaried (full- and part-time) employees of eligible GM suppliers and business associates (e.g., fleet and commercial customers), not including contract employees, are eligible to share their discount each time they purchase or lease a GM vehicle using the GM Supplier Discount. Please note: To qualify for this program, you must be a resident of the United States. To determine if your company is eligible, perform a company search. If eligible, your Company Code will be listed alongside your company's name.</p>
+
+                <p class="question"><b>Does my friend or family member have to take delivery by a specific date?</b></p>
+                <p class="answer">You have up to one year from the date of your vehicle purchase or lease to request an authorization number. Your friend or family member has 90 days from the authorization number's date of issue to take delivery of their vehicle with supplier pricing.</p>
+
+                <p class="question"><b>What information do I need from my friend or family member to request an authorization number for them?</b></p>
+                <p class="answer">You will need their date of birth and ZIP Code.</p>
+
+                <p class="question"><b>How do I get an authorization number for my friend or family member?</b></p>
+                <p class="answer">Sign in on the navigation menu above and click on the "Share Your Discount" link from the Programs menu. Select "Get Authorization Number" and follow the prompts.</p>
+
+                <p class="question"><b>What will my friend or family member need to take to the dealership, and do I have to go with them?</b></p>
+                <p class="answer">All they need is the authorization number you acquired for them and their photo ID. You do not have to go to the dealership with them.</p>
+
+                <p class="question"><b>Can my friend or family member order a vehicle and still receive the GM Supplier Discount?</b></p>
+                <p class="answer">Yes, if they take delivery of their vehicle on or before their authorization number expires (90 days from its date of issue).</p>
+
+                <p class="question"><b>What if my friend or family member changes their mind? Can I cancel their authorization number and get a new one for someone else?</b></p>
+                <p class="answer">If an authorization number is in "Requested" status, it may be canceled. To cancel the authorization number, sign in on the navigation menu above and select "Share Your Discount" from the Programs menu. Then select "Void" to cancel the appropriate authorization number.</p>
+
+                <p class="question"><b>Will my friend or family member be able to get this special discounted pricing on top of other GM offers?</b></p>
+                <p class="answer">This program is compatible with most other regionally advertised cash allowances or APRs. You'll need to check with your participating GM Dealer for details on specific offers, or simply select "Offers" from the top navigation menu of this page.</p>
+            </div>
+
+            <button class="discount-collapsible">Financial</button>
+            <div class="discount-collapsible-content">
+                <p class="question"><b>Can I combine the GM Supplier Discount with most current offers?</b></p>
+                <p class="answer">In most cases, yes. Either see "Offers" on this site, or visit your GM Dealer for details to see how the values add up.</p>
+
+                <p class="question"><b>How do I get the GM Extended Family Card?</b></p>
+                <p class="answer">Simply go to gmcard.com/efc and click on "Apply Now." While you're there, check out GM's great lineup of vehicles and pick the one you'll be earning toward.</p>
+
+                <p class="question"><b>What's the difference between the GM Extended Family Card and the BuyPower Card&reg;?</b></p>
+                <p class="answer">The GM Extended Family Card from Capital One was created for members of the GM family who are eligible for the GM Supplier Discount. You can receive a full 1% Earnings on all credit card purchases redeemable toward any eligible, new vehicle from Chevrolet, Buick, GMC or Cadillac. Combine your Earnings with your GM Supplier Discount for even greater savings. With the GM Extended Family Card, you also have the option to receive 1% Earnings redeemable for cash back in $50 increments.
+                <br><br>
+                With the BuyPower Card from Capital One, you can enjoy 5% Earnings on your first $5,000 in credit card purchases every year. After that, you will receive unlimited 2% Earnings on all other purchases. There is no limit to the amount of Earnings you can accumulate or how much you can redeem toward your eligible, new Chevrolet, Buick, GMC or Cadillac vehicle. Plus, your Earnings do not expire. You can also combine your Earnings with most current GM offers and incentives. Earnings from the BuyPower Card cannot be combined with your GM Supplier Discount. See buypowercard.com/buypowercard/overview for details.</p>
+
+                <p class="question"><b>Can I combine this discount with Earnings from any GM Rewards Card?</b></p>
+                <p class="answer">You can combine the GM Supplier Discount with Earnings from the GM Extended Family Card or BuyPower Business Card. However, the GM Supplier Discount cannot be combined with the BuyPower Card&reg;. Earnings from the GM Rewards Cards are in addition to most current offers.</p>
+
+                <p class="question"><b>Do I have to purchase or lease through GM Financial?</b></p>
+                <p class="answer">No. You can purchase or lease through any financial institution. However, some APR offers are exclusive to specific financial institutions.</p>
+
+                <p class="question"><b>Does the purchase/lease require a down payment?</b></p>
+                <p class="answer">Your dealership will be able to provide details on the down payment for your chosen vehicle.</p>
+            </div>
+
+            <button class="discount-collapsible">At the Dealership</button>
+            <div class="discount-collapsible-content">
+                <p class="question"><b>Can I receive this discount from any GM dealer?</b></p>
+                <p class="answer">This program is available through all participating U.S. GM Dealers and is voluntary on the part of the dealers. Dealer participation is on a vehicle line basis. Please inform your dealer of your intention to use the GM Supplier Discount during your first contact with your dealer. If your dealer elects not to participate, you may visit another GM Dealer.</p>
+
+                <p class="question"><b>Can I order a vehicle through this program, rather than choosing one from my GM Dealer's Inventory?</b></p>
+                <p class="answer">Yes, you can receive the discount when you order through a participating GM Dealer.</p>
+
+                <p class="question"><b>Are dealer-installed options covered by this discount (e.g., theft-deterrent deviced?)</b></p>
+                <p class="answer">No. Any additional dealer-installed options, conversion/upfit packages, General Motors Protection Plans and other extra-charge items will be supplied at a price agreed upon by the customer and the dealer.</p>
+
+                <p class="question"><b>Are dealer demonstration vehicles included in this program?</b></p>
+                <p class="answer">Yes, if the vehicle has less than 7,500 miles and a dealer demo allowance has not been paid on the vehicle. See your dealer for details.</p>
+
+                <p class="question"><b>Can I use a trade-in with this program?</b></p>
+                <p class="answer">Please contact your nearest dealership for more information about trade-ins.</p>
+
+                <p class="question"><b>How can I find out more about a specific GM model?</b></p>
+                <p class="answer">Questions about vehicle features, pricing, model eligibility, leasing and current offers should be directed to a participating GM Dealer. You can also visit gm.com for more information on a specific vehicle.</p>
+            </div>
+
+            <button class="discount-collapsible">Account</button>
+            <div class="discount-collapsible-content">
+                <p class="question"><b>I forgot my user name. How can I retrieve it?</b></p>
+                <p class="answer">Click on the "Forgot user name" link on the login box and you will be prompted for your name, address, ZIP Code, date of birth and phone number. After the system has validated your information, you will be prompted to enter the answer to the secret question you selected when you created an account. After you provide the correct answer, your user name will appear and you will be prompted to enter your password.</p>
+
+                <p class="question"><b>I forgot my password. How can I retrieve it?</b></p>
+                <p class="answer">Click on the "Forgot my password" link on the login box and you will be prompted for your user name. Once the system has validated a correct user name, you will be prompted to enter the answer to the secret question you selected when you created an account. After you provide the correct answer, you will be prompted to reset your password.</p>
+
+                <p class="question"><b>How do I edit my profile?</b></p>
+                <p class="answer">To update your information, log in to the site and click the My Profile link in the top right corner. Once you have made your updates, click Save. You will then receive an email confirming your changes.</p>
+
+                <p class="question"><b>Where can I go for immediate assistance?</b></p>
+                <p class="answer">Call the automated phone system at 1.800.960.3375.</p>
+
+            </div>
+
+            <hr class="discount" style="margin-top: 45px;">
+        </div>
+
+        <div id="rules" class="discount-container" style="margin-top: 35px;">
+            <div class="discount-section">
+                <h2 class="discount" align="center" style="margin-top: 45px;">Rules and Guidelines</h2>
+                <h3 class="discount">Overview</h3>
+                <p>
+                    The General Motors Supplier Discount Program (The Program) provides eligible Participants (The Participant) residing in the United States with the opportunity to purchase/lease new and unused vehicles at The Program price at a participating dealer.
+                    <br><br>
+                    By purchasing or leasing a vehicle through The Program, the eligible GM Participant and Sponsored Purchaser acknowledge these Rules and Guidelines and agree to abide by them.
+                    <br><br>
+                    It is the responsibility of The Participant to know the rules of The Program as set forth in this document and to make them known to their Sponsored Purchasers. Violations of these rules by The Participant may result in sanctions against The Participant.
+                    <br><br>
+                    The Program may be withdrawn at any time, and its terms are subject to change from time to time by General Motors (GM). Final decisions in all matters relating to the interpretation of any rule or phrase of this activity rest solely with General Motors.
+                    <br><br>
+                    The Program cannot be applied to a prior purchase or lease.
+                </p>
+
+                <button class="discount-collapsible">View Complete Rules and Guidelines</button>
+                    <div class="discount-collapsible-content">
+                        <h3 class="discount">Eligibility</h3>
+                        <p style="margin-bottom: 0px;"><b>A. Eligible Participants</b></p>
+                        <p style="margin-top: 0px;">This program is available only to:</p>
+                        <p style="padding-left: 40px;"> 1.  Active employees of eligible GM supplier companies. <br>
+                            2.  Active employees of eligible GM fleet and commercial companies.
+                        </p>
+
+                        <p style="margin-bottom: 0px;"><b>B. Sponsored Purchasers</b></p>
+                        <p style="margin-top: 0px;">Participants under The Program are not eligible to sponsor any purchasers unless The Participant purchases. Each time an eligible Participant purchases or leases an eligible, new GM vehicle under the GM Supplier Discount Program, The Participant will be granted the opportunity to pass on the GM Supplier Discount to one individual for up to one year after purchase or lease.</p>
+
+                        <p style="margin-bottom: 0px;"><b>C. Required Documentation</b></p>
+                        <p style="margin-top: 0px;">Participants must present the following, along with a valid authorization number, to a participating GM Dealer in order to purchase or lease under The Program:</p>
+                        <p style="padding-left: 40px;">1.  A copy of The Participant's valid company ID/badge or a copy of a current (within the last 30 days) pay stub with all information redacted except the date of the pay stub, Participant's name (payee) and name of supplier company (payer).<br>
+                        2.  A copy of The Participant's driver's license with the driver's license number redacted.
+                        </p>
+
+                        <h3 class="discount">Program Rules</h3>
+                        <p>General Motors will conduct periodic audits to ensure the integrity of The Program. Participants may be asked to furnish documentation supporting their eligibility with these rules. Documents requested may include, but are not limited to, company ID/badge, pay stub, etc.
+                        <br><br>
+                        General Motors reserves the right to audit dealership records and disqualify any sales that do not meet The Program guidelines. Any money improperly paid to any party based upon dealers' or Participants' representations shall be charged back accordingly. Violations of these Rules and Guidelines, including violation of retention periods or titling violations by any Sponsored Purchaser, will result in sanctions against The Participant. Sanctions may include, but are not limited to, the loss of privileges (two [2] years per violation) and/or repayment of monies. In addition, legal action may be commenced for any rule violation.
+                        </p>
+
+                        <p style="margin-bottom: 0px;"><b>Authorization Numbers</b></p>
+                        <p style="margin-top: 0px;">The sale of any vehicle purchase program authorization numbers or other unauthorized use of such numbers is prohibited. Participants (as defined in the Eligibility section) who violate this provision, or who sponsor the Sponsored Purchaser who violates this provision, will be suspended from The Program for five (5) years per violation and will be required to repay the incentive monies. Subsequent violations of this rule may result in permanent suspension from The Program.</p>
+
+                        <p style="margin-bottom: 0px;"><b>Eligibility Period</b></p>
+                        <p style="margin-top: 0px;">Authorization numbers are valid for 90 days toward the purchase or lease of an eligible vehicle at The Program price. To see a list of eligible vehicles, please visit gmsupplierdiscount.com and select "Vehicles" on the home page. Some models may have limited availability. Eligibility of GM vehicles may change at any time without notice. Participants or Sponsored Purchasers must be eligible to participate throughout the entire purchase process; i.e., on the date the process is started through the date of vehicle delivery.</p>
+
+                        <p style="margin-bottom: 0px;"><b>Limitation on Number of Vehicles</b></p>
+                        <p style="margin-top: 0px;">Participants may purchase/lease up to two (2) eligible, new and unused vehicles per calendar year.</p>
+
+                        <p style="margin-bottom: 0px;"><b>Retention</b></p>
+                        <p style="margin-top: 0px;">If purchasing or leasing a vehicle under The Program with cash or through a loan, ownership must be retained for at least six (6) months from the date of delivery of the vehicle. It is prohibited under The Program to purchase/lease and register/ title a vehicle and then surrender the vehicle for part or all of the required retention period to any other person.</p>
+
+                        <p><b>GM reserves the right to modify the retention rules at any time. Retention periods for some vehicles may be different than the retention period referenced in previous versions of the Rules and Guidelines.</b></p>
+
+                        <p style="margin-bottom: 0px;"><b>Titling Restrictions</b></p>
+                        <p style="margin-top: 0px; margin-bottom: 0px;">A vehicle purchased/leased under The Program must be used for the personal, noncommercial use/transportation of The Participant. In addition, it is prohibited under The Program to purchase/lease a vehicle for commercial use or to title in a business name.
+                        <br><br>
+                        Vehicles purchased under The Program must be registered, licensed, titled, insured and owned by The Participant. Vehicles may also be titled in the name of a living trust that bears the name of The Participant.
+                        <br><br>
+                        When it is necessary for financial reasons, vehicles may be co-titled in the name of a non-eligible person. In these cases, all of the following requirements apply:
+                        </p>
+                        <p style="padding-left: 40px; margin-bottom: 0px; margin-top: 0px;">
+                        1.  The Participant's name must be the first name listed on the title<br>
+                        2.  The Participant's name must be the first name listed on the registration<br>
+                        3.  The Participant's name must be the first name listed on the financing documents<br>
+                        </p>
+                        <p style="margin-top: 0px;">If any one of these requirements is not met, unless compliance is not possible under state law, the vehicle may not be co-titled in the name of a non-eligible person.</p>
+
+                        <p style="margin-bottom: 0px;"><b>Inducements</b></p>
+                        <p style="margin-top: 0px;">Participants shall not solicit or accept money or discounts from dealers, other persons or other business entities, except GM-sponsored incentives, in connection with the sale of vehicles under The Program. <b> At no time should a Participant accept payment or other consideration from dealers for referrals.</b> Participants may accept inducements of nominal value, up to $50, provided the inducements are offered to the general public and are noncash in nature, such as a free first oil change. This prohibition does not apply to a fuel fill if provided by the dealer at the time of delivery.
+                        </p>
+
+                        <p style="margin-bottom: 0px;"><b>Pricing Sheet</b></p>
+                        <p style="margin-top: 0px;">Included in required paperwork at the dealership is the GM Vehicle Purchase Customer-Dealer Agreement and Pricing Sheet. This should be reviewed and, once complete, signed by the purchaser. DO NOT SIGN the agreement if it is blank or The Program price from the invoice is not shown. If you have any questions or concerns regarding your purchase or lease, clarify them with your participating dealer BEFORE closing the transaction. The GM Vehicle Purchase Customer-Dealer Agreement and Pricing Sheet must be signed prior to the completion of the deal.
+                        </p>
+
+                        <p style="margin-bottom: 0px;"><b>Documentation Fees</b></p>
+                        <p style="margin-top: 0px; margin-bottom: 0px;">Dealers will be permitted to assess a maximum of $75 in documentation fees, except in these specific instances: <br>
+                        - A documentation fee is specified in the applicable state law; <br>
+                        OR <br>
+                        - Your dealership charges all customers the same documentation fee (excluding customers purchasing under the GM Employee, Military, Executive Referral and Dealership Employee programs).
+                        </p>
+
+                        <h2 class="discount">Additional Informaiton</h2>
+                        <p>If the dealer you visit is not willing to sell you a vehicle at The Program price, you may visit another GM Dealer. Dealer participation is voluntary.
+                        <br><br>
+                        Dealers are not required to participate in the GM Supplier Discount Program. To determine a specific dealer's willingness to sell vehicles under The Program, you must contact the dealer directly.
+                        <br><br>
+                        During the initial dealer inventory buildup when new models are introduced, and from time to time thereafter, it may be necessary for GM to restrict purchase under The Program on certain models. Please go to gmsupplierdiscount.com to see a list of eligible vehicles.
+                        <br><br>
+                        The Program does not constitute an agreement between GM and any purchaser for the purchase/lease of any vehicle at a specific price. However, by purchasing a vehicle through The Program, The Participant and Sponsored Purchaser acknowledge The Program Rules and Guidelines and agree to abide by the same program Rules and Guidelines.
+                        <br><br>
+                        General Motors may unilaterally modify, change or withdraw The Program at any time.
+                        <br><br>
+                        Participants are required to report any unauthorized use immediately. Those who do not report any suspicious or unauthorized use of authorization numbers after they have been submitted on their behalf may be subject to the sanctions referenced in The Program Rules section.
+                        <br><br>
+                        Failure to comply with an audit request may subject The Participant to the consequences referenced in The Program Rules section. General Motors has the final decision on all eligibility requirements. The Rules and Guidelines of The Program may be modified by GM at any time, in its sole discretion.</p>
+
+                        <p style="margin-bottom: 0px;"><b>Compliance With Applicable Laws</b></p>
+                        <p style="margin-top: 0px; margin-bottom: 0px;">If any law or regulation is adopted or interpreted which, in GM's opinion, prohibits or penalizes the implementation of The Program, GM may, in its sole discretion, cancel The Program or any order submitted pursuant to The Program without any further obligation and without any liability to either the dealer or The Participant.
+                        <br><br>
+                        GENERAL MOTORS TERMS AND CONDITIONS CANNOT BE MODIFIED BY ANYONE OTHER THAN GENERAL MOTORS. GM (Rev. 11/30/17)
+                        <br><br>
+                        The marks of General Motors, its divisions, slogans, emblems, vehicle model names, vehicle body designs and other marks appearing in this document are the trademarks and/or service marks of General Motors, its subsidiaries, affiliates or licensors. 2018 General Motors. Buckle up, America!</p>
+                    </div>
+                </div>
+            </div> <!-- end of rules -->
+
+
+        </div> <!-- end of "body" -->
+
+
+
+
+
+
+
+</div>
